@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "intertechdemo-0f73"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "intertechdemo-0f73"
+  template:
+    metadata:
+      labels:
+        app: "intertechdemo-0f73"
+    spec:
+      containers:
+        - name: "intertechdemo-0f73"
+          image: "intertechdemo.azurecr.io/intertechdemo"
+          ports:
+          - containerPort: 5000
